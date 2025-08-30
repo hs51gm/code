@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>51GAME CODES</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 3px solid #007bff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .code-item {
+      margin: 10px 0;
+      padding: 15px;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .code-item:hover {
+      background-color: #007bff;
+      color: white;
+      transform: scale(1.02);
+    }
+    .gift-icon {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+    /* Toast Notification */
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      margin: 0 auto;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 10px;
+      position: fixed;
+      z-index: 1;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+    .toast.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @keyframes fadein {
+      from { bottom: 0; opacity: 0; }
+      to { bottom: 30px; opacity: 1; }
+    }
+    @keyframes fadeout {
+      from { bottom: 30px; opacity: 1; }
+      to { bottom: 0; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Profile Image -->
+  <img src="https://i.ibb.co/Tg7tyCG/516515.png" alt="Profile" class="profile">
+  
+  <h1>51GAME CODES</h1>
+  <h2>Click any codes and copy automatically</h2>
+
+  <div class="code-item" onclick="copyToClipboard('D2A3E60EEFC0B705B265BBCC6FBD1674')">
+    <span class="gift-icon">🎁</span>₹20 → Recharge ₹100<br>
+    D2A3E60EEFC0B705B265BBCC6FBD1674
+  </div>
+  <div class="code-item" onclick="copyToClipboard('D2EA75ED8B4C757878F982C657192D3F')">
+    <span class="gift-icon">🎁</span>₹30 → Recharge ₹500<br>
+    D2EA75ED8B4C757878F982C657192D3F
+  </div>
+  <div class="code-item" onclick="copyToClipboard('8A78AD56D8C6F3B4455BB836AF4C6216')">
+    <span class="gift-icon">🎁</span>₹50 → Recharge ₹1000<br>
+    8A78AD56D8C6F3B4455BB836AF4C6216
+  </div>
+  <div class="code-item" onclick="copyToClipboard('87FAFBB50BA1C06A5689C839083C1144')">
+    <span class="gift-icon">🎁</span>₹100 → Recharge ₹3000<br>
+    87FAFBB50BA1C06A5689C839083C1144
+  </div>
+  <div class="code-item" onclick="copyToClipboard('97A60FD860A8B6F41A74D86C4B08CD54')">
+    <span class="gift-icon">🎁</span>₹500 → Recharge ₹10000<br>
+    97A60FD860A8B6F41A74D86C4B08CD54
+  </div>
+  <div class="code-item" onclick="copyToClipboard('26A0B2D3310F3CA2AF3CF11630C81A0F')">
+    <span class="gift-icon">🎁</span>₹1000 → Recharge ₹20000<br>
+    26A0B2D3310F3CA2AF3CF11630C81A0F
+  </div>
+  <div class="code-item" onclick="copyToClipboard('BEF16A9FCEFE975AB4456D9240EBD2EB')">
+    <span class="gift-icon">🎁</span>₹1500 → Recharge ₹50000<br>
+    BEF16A9FCEFE975AB4456D9240EBD2EB
+  </div>
+  <div class="code-item" onclick="copyToClipboard('0644A8E3ACA6BB98A714CFA77BDAC8F0')">
+    <span class="gift-icon">🎁</span>₹3000 → Recharge ₹100000<br>
+    0644A8E3ACA6BB98A714CFA77BDAC8F0
+  </div>
+  <div class="code-item" onclick="copyToClipboard('516B9B7C5897EE9BCE1A1AD8249C2B05')">
+    <span class="gift-icon">🎁</span>Super Value Gift Code: → Recharge ₹200<br>
+    516B9B7C5897EE9BCE1A1AD8249C2B05
+
+    
+  </div>
+
+  <div class="note">
+    CLICK TO DIRECTLY COPY THE CODE!
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script>
+  function copyToClipboard(text) {
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+
+    tempInput.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(tempInput);
+
+    showToast("Code copied: " + text);
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.className = "toast show";
+
+    setTimeout(() => {
+      toast.className = toast.className.replace("show", "");
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
